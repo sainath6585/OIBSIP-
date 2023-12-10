@@ -1,0 +1,16 @@
+<!-- charging_station_info.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Charging Station Info</title>
+</head>
+<body>
+    <h1>Charging Station Information</h1>
+    <p>Name: {{ charging_station.name }}</p>
+    <p>Location: {{ charging_station.location }}</p>
+    <p>Connectors: {{ charging_station.connectors|join(', ') }}</p>
+    <p>Charging Rate: {{ charging_station.charging_rate }}</p>
+    <p>Occupancy: {{ charging_station.occupancy }}</p>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>
