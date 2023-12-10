@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><h2>Temperature</h2>
+            <h1>Converter</h1></a>
+        </div>
+        <nav class="nav">
+            <ul id="sidebar">
+                <li><a href="index.html">Home</a></li>
+               <li><a href="#about">About</a></li>
+                <li><a href="contact.html">Contact</a></li>       
+                <li>
+                    <div class="options-menu">
+                        <div class="dropdown" onclick="dropdown()">
+                            Options
+                            <img src="dropdown.png" alt="v">
+                        </div>
+                        <div class="options">
+                            <ul id="drop">
+                                <li onclick="fToC()">&deg;F to &deg;C</li>
+                                <li onclick="cToF()">&deg;C to &deg;F</li>
+                                <li onclick="kToC()">K to &deg;C</li>
+                                <li onclick="cToK()">&deg;C to K</li>
+                                <li onclick="fToK()">&deg;F to K</li>
+                                <li onclick="kToF()">K to &deg;F</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="menu-icon" id="menuicon" onclick="toggleMenu()">
+            <div class="menulines" id="menuline1"></div>
+            <div class="menulines" id="menuline2"></div>
+            <div class="menulines" id="menuline3"></div>
+        </div>
+    </header>
+    <section class="home" id="Home">
+        <div class="calculator">
+            <div class="heading"><h1 id="ConvertHeading">Fahrenhite to Celsius</h1></div>
+            <div class="row"><div class="input"><input type="number" name="Temperature" id="Temperature"></div><span id="inputSymbol" onclick="inputSymbolClicked()">&deg;F</span></div>
+            <div><button class="btn" id="Convert" onclick="convert()">Convert</button></div>
+            <div class="row"><div id="result"></div><span id="resultSymbol">&deg;C</span></div>
+            <div><button class="btn" id="Clr" onclick="clr()">Clear</button></div>
+
+        </div>
+    </section>
+    <section id="about">
+        <div><h1>--About--</h1></div>
+        <div><p><i>Hello Everyone, My name is SAI NATH REDDY and I am a frontend Developer.</i></p><br>
+         <br>       
+    </section>
+    <footer>
+        <b><p class="Copright">Copyright- SAI NATH REDDY</p><br></b>
+        <b>&copy;2023 </b>
+        <b> india </b>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
